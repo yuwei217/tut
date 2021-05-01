@@ -19,6 +19,14 @@ When you click the **Knit** button a document will be generated that includes bo
 summary(cars)
 ```
 
+
+
+```{r}
+This is me writing the introduction
+
+```
+
+
 ## Including Plots
 
 You can also embed plots, for example:
