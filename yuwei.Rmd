@@ -28,3 +28,38 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r , echo = FALSE, message = FALSE, warning = FALSE}
+# Libraries
+
+library(tidyverse)
+library(readr)
+library(kableExtra)
+library(bookdown)
+library(ggplot2)
+library(plotly)
+library(ggthemes)
+library(gridExtra)
+library(kableExtra)
+library(rmdformats)
+```
+
+This is the introduction all of us have to use. Let's figure out how to do it! 
+
+\section*{Country China and Thailand"}
+```{r}
+cases<- read_csv("~/git/Tutorial8/Data/worldwidecases.csv")
+```
+
+```{r}
+China_cases <- cases %>% filter(countriesAndTerritories== "China")
+china_cases <- China_cases %>% select(month, cases)
+    
+ggplot(China_cases, aes(x = dateRep,
+y = cases)) +
+  geom_line() +
+  xlab("Date") + 
+  ylab("Cases") +
+theme_bw()
+china_cases
+```
