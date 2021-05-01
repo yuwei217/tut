@@ -22,7 +22,7 @@ summary(cars)
 
 
 ```{r}
-This is me writing the introduction
+This is introduction.  
 
 ```
 
